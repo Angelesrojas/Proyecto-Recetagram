@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+
+    </head>
+
+    <body>
+
+
+
+
+
+        <div class="inicio">
+            <img src="imagenes/ensalada_de_judias_con_jamon_y_langostinos.jpeg.avif" alt="">
+            <img src="imagenes/pollo-curry-manzana_012ed92b_00535188_240223081823_900x900.jpg" alt="">
+            <img src="imagenes/entrecot-de-ternera.jpeg.avif" alt="">
+        </div>
+        <div class="Iniciar">
+            <h3>Iniciar sesion</h3>
+        </div>
+
+
+        <div class="usuario">
+            <h3>usuario</h3>
+            <input type="text" name="nombre" placeholder="Usuario">
+        </div>
+        <div class="contr">
+            <h3>Contraseña</h3>
+            <div class="password-container">
+                <input id="passwordInput" type="password" placeholder="Contraseña" aria-label="Contraseña" />
+                <button id="toggleBtn" class="toggle-btn" aria-pressed="false" aria-label="Mostrar contraseña">Mostrar</button>
+            </div>
+
+            <script>
+                const passwordInput = document.getElementById('passwordInput');
+                const toggleBtn = document.getElementById('toggleBtn');
+
+                toggleBtn.addEventListener('click', () => {
+                    const isPassword = passwordInput.type === 'password';
+                    passwordInput.type = isPassword ? 'text' : 'password';
+                    toggleBtn.textContent = isPassword ? 'Ocultar' : 'Mostrar';
+                    toggleBtn.setAttribute('aria-pressed', isPassword ? 'true' : 'false');
+                    toggleBtn.setAttribute('aria-label', isPassword ? 'Ocultar contraseña' : 'Mostrar contraseña');
+                });
+            </script>
+        </div>
+        <div class="entrarinicio">
+
+        </div>
+        <h2>No tienes cuenta?</h2>
+
+    </body>
+
+</html>
